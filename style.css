@@ -1552,6 +1552,110 @@ nav[aria-label="breadcrumb"] a:hover {
 
 
 
+/* =========================
+   HAMBURGER MENU
+========================= */
+
+.menu-btn {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Desktop navigation */
+header #nav {
+    display: block;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    /* Hamburger */
+    .menu-btn {
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .menu-btn:hover {
+        transform: scale(1.1);
+    }
+
+
+    /* Navigation closed */
+    header #nav {
+        display: block;
+        width: 100%;
+
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+
+        transform: translateY(-15px);
+
+        transition:
+            max-height 0.5s ease,
+            opacity 0.4s ease,
+            transform 0.4s ease;
+    }
+
+
+    /* Navigation opened */
+    header #nav.active {
+        max-height: 400px;
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+
+    /* Navigation links */
+    header #nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 15px;
+
+        padding: 15px 0;
+    }
+
+
+    /* Individual links animation */
+    header #nav li {
+        opacity: 0;
+        transform: translateY(-10px);
+
+        transition:
+            opacity 0.3s ease,
+            transform 0.3s ease;
+    }
+
+
+    /* Links appear when menu opens */
+    header #nav.active li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
 @media (max-width: 1200px) {
 
     header {
