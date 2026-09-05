@@ -77,7 +77,7 @@ The goal is simple:
 
 ## 🚀 Live Demo
 
-**[Visit ThreadCo →](YOUR-GITHUB-PAGES-LINK)**
+**[Visit ThreadCo →](https://rankajsingh469-sys.github.io/ThreadCo/)**
 
 ---
 
